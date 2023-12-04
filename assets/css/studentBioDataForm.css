@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: aqua;
+}
+
+.form-container{
+    background-color: aliceblue;
+    width: 500px;
+    transform: translate(370px, 10px);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.user-brand{
+    text-align: center;
+}
+
+.user-brand img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+input{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.first-name-container, .last-name-container, .nationality-container, .state-container, .lga-container{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: blue;
+    color: aliceblue;
+    border: none;
+}
+
+.button-container{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+button:hover{
+    background-color: black;
+}
