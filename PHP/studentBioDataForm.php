@@ -25,7 +25,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $stmt->bindParam(":lga", $lga);
         $stmt->execute();
 
-        echo "Data Inserted Successfully";
+        header("location:../crud.php");
 
     }catch(PDOException $error){
         echo "Error: " . $error->getMessage();
