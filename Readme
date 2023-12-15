@@ -1,0 +1,33 @@
+This is the PHP Devs coding Challenge, which we're submitting on 16/12/2023
+
+This task were developed using HTML, CSS, Jquery, Ajax, Core PHP and PDO.
+
+for the admin login page use this as 
+username  =  AbdulmalikDev
+password  =  AbdulmalikDev@306
+
+if you submitted the form of login page, Ajax would send request asyncronously to server to check whether
+the username and the password are equivalent to the one which we stored in the database, if the username
+is not exist you would see error message pop up saying user is not found, if the username entered were exist
+and the password found does not exist you'll see error message pop up saying incorrect password, if the username
+and the password were both exists you'll see successful message pop up saying admin login successfully and after 
+4 seconds of delay then it will redirect you to student bio data form where you'll submit a form of five input fields,
+after successfully submitted it would redirect you to crud operation page where you can view all the previous form fields
+submitted with create button, delete, update.
+
+if you click on the add data(create) it would take you to student bio data form where you can add new data.
+
+if you click on update it would take you to update form where you can able to edit the specific data selected.
+
+if you click on delete it would delete the specific data selected.
+
+for you to test this task just create a database name (challenge) in your mysql database then download the whole
+of this task source code on your machine, in your mysql database import a file inside PHP folder with name database.sql
+under the database you have created after that you're good to go for test the task.
+
+This Task were developed by 
+Muhammad Abdulmalik, 
+Web Developer, 
+Computer Scientist 
+      and 
+the challenge participant.
