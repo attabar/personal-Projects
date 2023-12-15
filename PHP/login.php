@@ -26,6 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
         if($row && password_verify($pass, $row['pass'])){
             $_SESSION['admin'] = $row['username'];
             echo "Admin Login Successfully...";
+            // header("location:../bioDataForm.php")
         }else{
             echo "Incorrect Username or Password !!!";
         }

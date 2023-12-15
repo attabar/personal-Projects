@@ -1,9 +1,8 @@
 <?php
 
-session_start();
-
-if(isset($_GET['id'])){
-    $id = $_GET['id'];
+if(isset($_GET['delid'])){
+    $id = $_GET['delid'];
+    echo $id; 
 
     $host = "localhost";
     $username = "root";
@@ -11,21 +10,21 @@ if(isset($_GET['id'])){
     $dbname = "challenge";
 
     $delete = "DELETE FROM studenttable WHERE id = :id";
-
     try{
         $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-        $conn->setAttribute(PDO::ERRMODE_EXCEPTION, PDO::ATTR_ERRMODE);
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $stmt = $conn->prepare($delete);
         $stmt->bindParam(":id", $id);
         $stmt->execute();
 
-        header("location:../crud.php");
-        // echo "Deleted Successfully";
-
+        if($stmt){
+            header("location:../crud.php");
+        }else{
+            echo "Not Deleted";
+        }
     }catch(PDOException $error){
-        die("Delete Failed: " . $error->getMessage());
+        echo $error->getMessage();
     }
 }
-
 ?>

@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $host = "localhost";
 $username = "root";
@@ -16,16 +15,14 @@ try{
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     foreach($result as $row){
-        $_GET['id'] = $row['id'];
-        $id = $_GET["id"];
+        $id = $row['id'];
         $fname = $row['firstName'];
         $lname = $row['lastName'];
         $nationality = $row['nationality'];
         $state = $row['stat'];
         $lga = $row['LGA'];
-
-        echo "<tr><td>$fname</td><td>$lname</td><td>$nationality</td><td>$state</td><td>$lga</td><td><a href='./PHP/delete.php?delete=$id'><i class='bi bi-trash3-fill'></i></a></td><td><a href='./updateForm.php?update=$id'><i class='bi bi-pencil-square'></i></a></td></tr>";
-    }
+        // <td><a href='./updateForm.php?update=$id'></a></td>
+        echo "<tr><td>$id</td><td>$lname</td><td>$fname</td><td>$nationality</td><td>$state</td><td>$lga</td><td><a href='./updateForm.php?upid=$id'><i class='bi bi-pencil-square'></i></a></td><td><a href='./PHP/de.php?delid=$id'><i class='bi bi-trash3-fill'></i></a></td></tr>";    }
 
 }catch(PDOException $error){
     echo "Error: " . $error->getMessage();

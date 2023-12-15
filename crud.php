@@ -12,17 +12,17 @@
 <a href="./bioDataForm.php"><button class="addButton">Add Data</button></a>
 <table>
   <tr>
+    <th>S/N</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Nationality</th>
     <th>State</th>
     <th>L.G.A</th>
-    <th>DELETE</th>
-    <th>UPDATE</th>
+    <th>update</th>
+    <th>delete</th>
   </tr>
     <?php
-    require_once "./PHP/crudCommand.php";
-    // echo "<td>$fname</td>";
+    include "./PHP/crudCommand.php";
     ?>
 </table>
 

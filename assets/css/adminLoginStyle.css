@@ -8,6 +8,7 @@
 
 body{
     background-color: aqua;
+    height: 50vh;
 }
 
 .login-page{
@@ -61,4 +62,16 @@ input{
     background-color: aliceblue;
     color: black;
     font-weight: bolder;
+}
+
+@media only screen and (max-width:767px){
+    .login-page{
+        width: 100%;
+        background-color: aliceblue;
+        transform: translate(0px, 30px);
+    }
+    input{
+        width: 100%;
+        padding: 10px;
+    }
 }

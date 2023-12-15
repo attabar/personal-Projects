@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="form-container">
-        <form id="submitForms" method="POST" action="./PHP/studentBioDataForm.php">
+        <form id="submitForms" autocomplete="off" method="POST" action="./PHP/studentBioDataForm.php">
             <div class="user-brand">
                 <h2>Student Bio Data Form</h2>
                 <img src="./assets/img/studentAvatar.jpeg" alt="" srcset="">
